@@ -32,3 +32,33 @@ links.forEach(link => {
             titles[pageName];
     });
 });
+
+
+// CONNEXION DE DÉMONSTRATION
+
+const loginForm = document.getElementById("login-form");
+
+if (loginForm) {
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const role = document.getElementById("role").value;
+        const message = document.getElementById("login-message");
+
+        if (username.trim() === "" || password.trim() === "") {
+            message.textContent = "Remplis tous les champs !";
+            return;
+        }
+
+        sessionStorage.setItem("userRole", role);
+        sessionStorage.setItem("username", username);
+
+        message.textContent = "Connexion de démonstration réussie !";
+
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 1000);
+    });
+}
