@@ -280,3 +280,20 @@ header h1 {
     margin-top: 15px;
     text-align: center;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.card {
+    scroll-margin-top: 30px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+#accueil {
+    scroll-margin-top: 30px;
+}
