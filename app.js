@@ -90,3 +90,13 @@ if (logout) {
         sessionStorage.clear();
     });
 }
+const notes = [15, 13, 17];
+
+const moyenne =
+    notes.reduce((total, note) => total + note, 0) / notes.length;
+
+const affichageMoyenne = document.getElementById("moyenne");
+
+if (affichageMoyenne) {
+    affichageMoyenne.textContent = moyenne.toFixed(2) + "/20";
+}
