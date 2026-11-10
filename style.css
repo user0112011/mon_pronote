@@ -331,3 +331,47 @@ td:first-child {
     font-weight: bold;
     color: #7774dc;
 }
+/* TABLEAU DE BORD */
+
+.dashboard {
+    margin-top: 30px;
+}
+
+.dashboard h2 {
+    color: #7774dc;
+    margin-bottom: 20px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.mini-card {
+    background: #f5f3ff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #e8e4ff;
+}
+
+.mini-card h3 {
+    font-size: 16px;
+    color: #7774dc;
+}
+
+.mini-card p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.mini-card small {
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}
