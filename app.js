@@ -100,3 +100,19 @@ const affichageMoyenne = document.getElementById("moyenne");
 if (affichageMoyenne) {
     affichageMoyenne.textContent = moyenne.toFixed(2) + "/20";
 }
+const boutonProfil = document.getElementById("save-profil");
+
+if (boutonProfil) {
+    boutonProfil.addEventListener("click", function() {
+        localStorage.setItem("nom", document.getElementById("nom-eleve").value);
+        localStorage.setItem("classe", document.getElementById("classe-eleve").value);
+        localStorage.setItem("lycee", document.getElementById("lycee-eleve").value);
+
+        document.getElementById("profil-message").textContent =
+            "Profil enregistré ! 💜";
+    });
+
+    document.getElementById("nom-eleve").value = localStorage.getItem("nom") || "";
+    document.getElementById("classe-eleve").value = localStorage.getItem("classe") || "";
+    document.getElementById("lycee-eleve").value = localStorage.getItem("lycee") || "";
+}
