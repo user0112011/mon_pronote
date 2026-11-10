@@ -204,3 +204,79 @@ header h1 {
         grid-template-columns: 1fr;
     }
 }
+
+/* PAGE DE CONNEXION */
+
+.login-body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e9e8ff, #f5f3ff);
+}
+
+.login-box {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 10px 35px #252b4815;
+}
+
+.login-box h1 {
+    color: #252b48;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.login-box h1 span {
+    color: #8985e8;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #999;
+    margin-bottom: 35px;
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+}
+
+.login-box label {
+    display: block;
+    margin: 20px 0 8px;
+    font-weight: bold;
+}
+
+.login-box input,
+.login-box select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    background: #fafaff;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    background: #7774dc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #625fc4;
+}
+
+#login-message {
+    margin-top: 15px;
+    text-align: center;
+}
