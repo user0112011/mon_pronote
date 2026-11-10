@@ -62,3 +62,31 @@ if (loginForm) {
         }, 1000);
     });
 }
+
+// PERSONNALISATION DU COMPTE
+
+const accountInfo = document.getElementById("account-info");
+
+if (accountInfo) {
+    const username = sessionStorage.getItem("username");
+    const role = sessionStorage.getItem("userRole");
+
+    if (username && role) {
+        const roleName = role === "eleve" ? "Élève" : "Professeur";
+
+        accountInfo.textContent =
+            "Connecté en tant que " + username + " (" + roleName + ")";
+    } else {
+        accountInfo.textContent = "Mode démonstration";
+    }
+}
+
+// DÉCONNEXION
+
+const logout = document.getElementById("logout");
+
+if (logout) {
+    logout.addEventListener("click", function() {
+        sessionStorage.clear();
+    });
+}
